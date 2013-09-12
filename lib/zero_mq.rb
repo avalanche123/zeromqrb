@@ -1,3 +1,4 @@
+require 'ffi-rzmq'
 require 'delegate'
 
 require 'zero_mq/version'
