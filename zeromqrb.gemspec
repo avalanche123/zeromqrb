@@ -5,7 +5,7 @@ require 'zero_mq/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "zeromqrb"
-  spec.version       = Zeromqrb::VERSION
+  spec.version       = ZeroMQ::VERSION
   spec.authors       = ["Bulat Shakirzyanov"]
   spec.email         = ["bulat@twilio.com"]
   spec.description   = %q{High level wrapper for ffi-rzmq gem}
