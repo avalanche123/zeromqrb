@@ -7,7 +7,7 @@ module ZeroMQ
 
     def check_result!(rc)
       return rc if ZMQ::Util.resultcode_ok?(rc)
-      raise ERRORS.fetch(ZMQ::Util.errno)
+      raise ERRORS.fetch(ZMQ::Util.errno) { ZMQ::Util.error_string }
     end
   end
 end
