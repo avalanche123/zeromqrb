@@ -1,6 +1,7 @@
 module ZeroMQ
   module Errors
     ERRORS = Errno.constants.map(&Errno.method(:const_get)).
+             select { |obj| obj.is_a?(Class) && obj < SystemCallError }.
              inject({}) { |map, error| map[error.const_get(:Errno)] = error; map }
 
     private
